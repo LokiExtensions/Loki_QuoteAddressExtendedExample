@@ -1,0 +1,20 @@
+<?php
+declare(strict_types=1);
+
+use Loki\QuoteAddressExtended\ViewModel\CheckoutQuoteAddressExtendedView;
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+
+/** @var Template $block */
+/** @var Escaper $escaper */
+/** @var CheckoutQuoteAddressExtendedView $viewModel */
+$viewModel = $block->getViewModel();
+$value = $viewModel->getValue('example_address_field', 'auto');
+if ($value === '') {
+    return;
+}
+?>
+<div>
+    <span><?= $escaper->escapeHtml(__('Example address field')) ?></span>:
+    <?= $escaper->escapeHtml($value) ?>
+</div>

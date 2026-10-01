@@ -1,0 +1,20 @@
+<?php
+declare(strict_types=1);
+
+use Loki\QuoteAddressExtended\ViewModel\Adminhtml\OrderAddressExtendedView;
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+
+/** @var Template $block */
+/** @var Escaper $escaper */
+/** @var OrderAddressExtendedView $viewModel */
+$viewModel = $block->getViewModel();
+$value = $viewModel->getValue('example_address_field', 'auto');
+if ($value === '') {
+    return;
+}
+?>
+<tr>
+    <th><?= $escaper->escapeHtml(__('Example address field')) ?></th>
+    <td><?= $escaper->escapeHtml($value) ?></td>
+</tr>

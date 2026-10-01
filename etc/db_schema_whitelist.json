@@ -1,0 +1,7 @@
+{
+    "loki_quote_address_extended": {
+        "column": {
+            "example_address_field": true
+        }
+    }
+}
