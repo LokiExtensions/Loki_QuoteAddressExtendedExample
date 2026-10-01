@@ -2,7 +2,7 @@
     "modules": [],
     "config": [],
     "tests": [],
-    "module_name": "Yireo_QuoteAddressExtendedExample",
+    "module_name": "Loki_QuoteAddressExtendedExample",
     "composer_name": "loki-checkout/magento2-quote-address-extended-example",
     "php_versions": [
         "8.2",
