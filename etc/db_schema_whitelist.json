@@ -3,5 +3,10 @@
         "column": {
             "example_address_field": true
         }
+    },
+    "loki_customer_address_extended": {
+        "column": {
+            "example_address_field": true
+        }
     }
 }

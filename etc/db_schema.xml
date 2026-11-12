@@ -4,4 +4,7 @@
     <table name="loki_quote_address_extended">
         <column xsi:type="varchar" name="example_address_field" nullable="true" length="255" comment="Example Address Field"/>
     </table>
+    <table name="loki_customer_address_extended">
+        <column xsi:type="varchar" name="example_address_field" nullable="true" length="255" comment="Example Address Field"/>
+    </table>
 </schema>
