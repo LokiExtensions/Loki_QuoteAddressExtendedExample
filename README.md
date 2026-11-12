@@ -21,14 +21,17 @@ bin/magento module:enable Loki_QuoteAddressExtendedExample
 
 
 ## Usage
-Example module for `Loki_QuoteAddressExtended`. It adds a column `example_address_field` to the table `loki_quote_address_extended` and shows it:
+Example module for `Loki_QuoteAddressExtended`. It adds a column `example_address_field` to the tables `loki_quote_address_extended` and `loki_customer_address_extended` and shows it:
 
 - as an optional field in the Loki Checkout, below the customer gender; the value is stored with the shipping address (or the billing address for virtual quotes), using the block argument `address_type` set to `auto`;
 - in the checkout sidebar (when filled in);
-- in the order email and the invoice email (this module overrides the 4 core templates `sales_email_order_template`, `sales_email_order_guest_template`, `sales_email_invoice_template` and `sales_email_invoice_guest_template`; these are copies of the Magento 2.4.9 templates, so they need to be kept in sync on upgrades and they replace any theme overrides of these templates);
-- on the admin order page and the admin invoice page.
+- in the order, invoice, shipment and credit memo emails (this module overrides the 8 core templates `sales_email_order_template`, `sales_email_order_guest_template`, `sales_email_invoice_template`, `sales_email_invoice_guest_template`, `sales_email_shipment_template`, `sales_email_shipment_guest_template`, `sales_email_creditmemo_template` and `sales_email_creditmemo_guest_template`; these are copies of the Magento 2.4.9 templates, so they need to be kept in sync on upgrades and they replace any theme overrides of these templates);
+- on the admin order, invoice, shipment and credit memo pages;
+- as an editable field on the admin order address edit page (declared in `etc/di.xml` via `Loki\QuoteAddressExtended\Config\AdminFields`).
 
-Note that `Loki_QuoteExtendedExample` overrides the same 4 email templates. When both example modules are enabled, only one of the overrides is used.
+Because the column also exists in `loki_customer_address_extended`, its value is copied between the customer address book and the checkout.
+
+Note that `Loki_QuoteExtendedExample` overrides the same order and invoice email templates. When both example modules are enabled, only one of the overrides is used.
 
 
 ## Current status
