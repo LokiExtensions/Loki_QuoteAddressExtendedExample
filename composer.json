@@ -24,5 +24,8 @@
         "psr-4": {
             "Loki\\QuoteAddressExtendedExample\\": ""
         }
+    },
+    "require-dev": {
+        "loki/magento2-functional-tests": "@dev"
     }
 }
