@@ -1,0 +1,10 @@
+{
+  "ignore": [
+    "LokiCheckout_Core",
+    "Magento_Email",
+    "Magento_Sales",
+    "loki-checkout/magento2-core",
+    "magento/module-email",
+    "magento/module-sales"
+  ]
+}
