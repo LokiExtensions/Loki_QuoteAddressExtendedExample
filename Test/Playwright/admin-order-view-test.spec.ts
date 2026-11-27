@@ -41,7 +41,7 @@ async function placeOrder(page: Page, value: string): Promise<string> {
     await successPage.expectToBeLoaded();
 
     const bodyText = await page.locator('body').innerText();
-    const match = bodyText.match(/\b(\d{9,})\b/);
+    const match = bodyText.match(/order #(?: is)?:?\s*([A-Za-z0-9-]+?)\.?(?:\s|$)/i);
     expect(match, 'Order number on success page').not.toBeNull();
 
     return match[1];
