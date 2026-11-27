@@ -61,7 +61,8 @@
         "Loki_FieldComponents",
         "Loki_QuoteAddressExtended",
         "Magento_Email",
-        "Magento_Sales"
+        "Magento_Sales",
+        "Magento_Store"
     ],
     "phpcs_severity": "1",
     "phpstan_level": "9",
